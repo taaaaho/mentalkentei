@@ -1,0 +1,55 @@
+:root {
+  --brand: #5149c4;
+  --header: #3f35a8;
+  --brand-soft: #eceafb;
+  --ink: #24201f;
+  --muted: #5f6370;
+  --bg: #ffffff;
+  --surface: #f6f5fc;
+  --line: #e2e0f2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #a39dff;
+    --header: #2b2470;
+    --brand-soft: #23213f;
+    --ink: #f4eff0;
+    --muted: #a7aabb;
+    --bg: #13121c;
+    --surface: #1c1a2a;
+    --line: #2e2b45;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  overflow-wrap: anywhere;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.85;
+  color: var(--ink);
+  background: var(--bg);
+}
+header { background: var(--header); color: #fff; }
+header .inner, main, footer .inner { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+header .inner { padding-top: 28px; padding-bottom: 28px; display: flex; gap: 16px; align-items: center; }
+header img { width: 64px; height: 64px; border-radius: 15px; flex: none; }
+header h1 { margin: 0; font-size: 1.35rem; line-height: 1.4; overflow-wrap: anywhere; }
+header p { margin: 4px 0 0; opacity: 0.9; font-size: 0.9rem; }
+nav { border-bottom: 1px solid var(--line); background: var(--surface); }
+nav .inner { max-width: 760px; margin: 0 auto; padding: 10px 20px; display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.92rem; }
+a { color: var(--brand); }
+nav a { text-decoration: none; font-weight: 600; }
+nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
+main { padding-top: 12px; padding-bottom: 48px; }
+h2 { font-size: 1.15rem; margin: 2.2em 0 0.6em; padding-bottom: 6px; border-bottom: 2px solid var(--brand-soft); }
+h3 { font-size: 1rem; margin: 1.6em 0 0.3em; }
+.updated { color: var(--muted); font-size: 0.88rem; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 16px 0; }
+.contact { font-size: 1.05rem; font-weight: 700; word-break: break-all; }
+.note { color: var(--muted); font-size: 0.88rem; }
+ul { padding-left: 1.3em; }
+li { margin: 0.3em 0; }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+footer .inner { padding-top: 20px; padding-bottom: 32px; }
+.nowrap { white-space: nowrap; }
